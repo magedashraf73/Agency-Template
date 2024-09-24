@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .container {
@@ -186,6 +186,8 @@ body {
 }
 .features .feat i {
   color: var(--main-color);
+  flex-basis: 60px;
+  font-size: 30px;
 }
 .features .feat h3 {
   font-weight: 800;
@@ -259,7 +261,7 @@ body {
   }
 }
 @media (max-width: 1199px) {
-  .services .services-content .img {
+  .services .services-content .col:has(img) {
     display: none;
   }
 }
@@ -286,7 +288,9 @@ body {
   background-color: white;
 }
 .card img {
-  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 .portfolio .card .info {
   padding: 20px;
@@ -406,6 +410,12 @@ body {
   font-weight: 800;
   letter-spacing: -1px;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .about-contact .free,
+  .about-contact .link {
+    font-size: 25px;
+  }
 }
 .about-contact .social {
   display: flex;
